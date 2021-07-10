@@ -1,6 +1,6 @@
 class Block{
   constructor(x, y, width, height) {
-    super(x,y,width,height);
+   
       var options = {
           restitution :0.4,
           friction :0.0,
@@ -12,7 +12,7 @@ class Block{
       this.width = width;
       this.height = height;
       World.add(world, this.body);
-      super(x,y,width,height)
+     
       this.image=loadImage("block.png")
       this.Visibility=255
 
@@ -24,7 +24,7 @@ class Block{
       image(this.image,pos.x,pos.y,this.width, this.height);
       if(this.body.speed<3)
       {
-        super.display();
+        this.visible=false
       }
       else{
   
