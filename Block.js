@@ -11,11 +11,11 @@ class Block{
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
       this.height = height;
-      World.add(world, this.body);
+      
      
       this.image=loadImage("block.png")
       this.visibility=225
-
+  World.add(world, this.body);
       
     }
     display(){
