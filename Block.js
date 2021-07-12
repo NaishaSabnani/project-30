@@ -4,9 +4,9 @@ class Block{
       var options = {
           restitution :0.4,
           friction :0.0,
-          visibility:225,
-
       }
+
+    
       
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
@@ -14,24 +14,25 @@ class Block{
       World.add(world, this.body);
      
       this.image=loadImage("block.png")
-      this.Visibility=255
+      this.visibility=255
 
       
     }
     display(){
       var pos= this.body.position;
-      imageMode(CENTER);
-      image(this.image,pos.x,pos.y,this.width, this.height);
+      
       if(this.body.speed<3)
-      {
-        this.visible=false
+      {imageMode(CENTER);
+        image(this.image,pos.x,pos.y,this.width, this.height);
+       //this.visible=false
       }
       else{
   
        World.remove(world,this.body)
        push();
-       this.Visibility=this.Visibiity-5
-       tint(255,this.Visibility)
+       this.visibility=this.visibiity-5
+       tint(255,this.visibility)
+       image(this.image, this.body.position.x, this.body.position.y,this.width, this.height);
        
        pop();
       }
