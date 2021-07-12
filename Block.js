@@ -14,7 +14,7 @@ class Block{
       World.add(world, this.body);
      
       this.image=loadImage("block.png")
-      this.visibility=255
+      this.visibility=225
 
       
     }
@@ -31,7 +31,7 @@ class Block{
        World.remove(world,this.body)
        push();
        this.visibility=this.visibiity-5
-       tint(255,this.visibility)
+       tint(225,this.visibility)
        image(this.image, this.body.position.x, this.body.position.y,this.width, this.height);
        
        pop();
